@@ -14,7 +14,11 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+<<<<<<< HEAD
             background-color: #4eaaa6;
+=======
+            background-color: #DCF2F1;
+>>>>>>> d31b5567ecfc76b5e7d17c1113fbd1c0d9db3cd1
         }
 
         .login-container {
@@ -98,6 +102,7 @@
 <body>
     <div class="login-container">
         <div class="left-container">
+<<<<<<< HEAD
             <img src="assets/images/hospital.jpg" alt="Login Image">
         </div>
         <div class="right-container">
@@ -125,6 +130,68 @@
     </div>
     </div>
 
+=======
+            <img src="asset/images/hospital.jpg" alt="Login Image">
+        </div>
+        <div class="right-container">
+            <div class="login-form">
+                <h2>Login </h2>
+                <form id="loginForm">
+                    <label for="nama">Username :</label>
+                    <input type="text" id="nama" name="nama" required>
+
+                    <label for="no_hp">Nomor Handphone :</label>
+                    <input type="password" id="no_hp" name="no_hp" required>
+
+                    <button type="button" class="btn btn-primary btn-block" onclick="loginUser()">Login</button>
+
+                </form>
+
+                <div class="register-link">
+                <p><b>Belum Punya Akun?</b> <a href="register.php">Registrasi disini</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loginUser() {
+            var nama = document.getElementById('nama').value;
+            var no_hp = document.getElementById('no_hp').value;
+
+            // Kirim data ke PHP untuk proses login
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'process_login.php');
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    if (response.status === 'success') {
+                        // Handle login berhasil
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Login Berhasil!',
+                            text: response.welcome_message,
+                            timer: 3000,
+                            showConfirmButton: false
+                        }).then(function () {
+                            window.location.href = response.redirect_url;
+                        });
+                    } else {
+                        // Handle login gagal
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Login Gagal',
+                            text: response.message
+                        });
+                    }
+                }
+            };
+            var params = 'nama=' + nama + '&no_hp=' + no_hp;
+            xhr.send(params);
+        }
+    </script>
+>>>>>>> d31b5567ecfc76b5e7d17c1113fbd1c0d9db3cd1
 </body>
 
 </html>

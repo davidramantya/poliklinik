@@ -7943,7 +7943,11 @@ jQuery.fx.speeds = {
 
 
 // Based off of the plugin by Clint Helfers, with permission.
+<<<<<<< HEAD
 // https://web.archive.org/web/20100324014747/http://blindsignals.com/index.php/2009/07/jquery-delay/
+=======
+// https://web.archive.org/web/20100324014747/http://blindsignals.com/dashboard.php/2009/07/jquery-delay/
+>>>>>>> d31b5567ecfc76b5e7d17c1113fbd1c0d9db3cd1
 jQuery.fn.delay = function( time, type ) {
 	time = jQuery.fx ? jQuery.fx.speeds[ time ] || time : time;
 	type = type || "fx";

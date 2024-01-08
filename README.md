@@ -7,9 +7,9 @@ password : admin
 ```
 
 ## Dokter dan Pasien
-
-# username dokter = password dokter
-# username pasien = password pasien
+```
+username dokter = password dokter
+username pasien = password pasien
 ```
 username : coba
 password : coba

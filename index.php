@@ -108,9 +108,9 @@
 <body class="hold-transition login-page">
     <div class="container-fluid flex flex-col justify-center items-center text-white p-5"
         style="height: 400px; background-color: #27958f;">
-        <h1 class="font-weight-bold mb-3">Sistem Temu Janji Pasien - Dokter</h1>
+        <h1 class="font-weight-bold mb-3">Appointment System Pasien - Dokter</h1>
         <h5>
-            Bimbingan Karir 2023 Bidang Website Development
+            Bimbingan Karir 2024 Bidang Website Development
         </h5>
     </div>
     <div class="container mt-5">
